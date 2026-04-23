@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: register-login-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://viruthika:Viruthika2006@cluster0.zc8zpbn.mongodb.net/?appName=Cluster0&retryWrites=true&w=majority
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: 10000
